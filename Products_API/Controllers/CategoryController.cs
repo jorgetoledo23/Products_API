@@ -28,7 +28,7 @@ namespace Products_API.Controllers
         {
             _context.Categories.Add(C);
             _context.SaveChanges();
-            return Ok("Category Added");
+            return Ok();
         }
 
 

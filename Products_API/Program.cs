@@ -14,10 +14,15 @@ var app = builder.Build();
 
 app.UseCors(options =>
 {
-    options.WithOrigins("http://localhost:3000/", "http://localhost:19006/");
-    options.AllowAnyOrigin();
-    options.AllowAnyMethod();
-    options.AllowAnyHeader();
+    //options.WithOrigins("http://localhost:3000/", "http://localhost:19006/");
+    //options.AllowAnyOrigin();
+    //options.AllowAnyMethod();
+    //options.AllowAnyHeader();
+    options
+                 .AllowAnyOrigin()
+                 .AllowAnyMethod()
+                 .AllowAnyHeader();
+                 
 });
 
 // Configure the HTTP request pipeline.
