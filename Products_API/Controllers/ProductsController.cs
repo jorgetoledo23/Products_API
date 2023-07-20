@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Products_API.Model;
+using System.Data;
 
 namespace Products_API.Controllers
 {
 
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize(Roles = "Free")]
     public class ProductsController : Controller
     {
         private readonly AppDbContext _context;
